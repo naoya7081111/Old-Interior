@@ -85,12 +85,14 @@
   opacity: 1;
 }
 
-.fav {
+.fav,
+.list {
   width: 100%;
   height: auto;
 }
 
-.fav__inner {
+.fav__inner,
+.list__inner {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,12 +104,14 @@
           justify-content: space-between;
 }
 
-.fav__item {
+.fav__item,
+.list__item {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
 
-.fav__item p {
+.fav__item p,
+.list__item p {
   text-align: center;
 }
 
@@ -146,7 +150,30 @@
           animation-fill-mode: forwards;
 }
 
-.bg-img-zoom {
+.float-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.float-img.inview {
+  -webkit-animation-name: kf-img-float;
+          animation-name: kf-img-float;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+.bg-img-zoom,
+.img-zoom {
   width: 100%;
   height: 420px;
   background-repeat: no-repeat;
@@ -155,12 +182,22 @@
   opacity: 0;
 }
 
-.inview .bg-img-zoom {
+.inview .bg-img-zoom, .inview
+.img-zoom {
   opacity: 1;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.inview:hover .bg-img-zoom, .inview:hover
+.img-zoom {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.inview .bg-img-zoom {
   -webkit-animation-name: kf-img-slide;
           animation-name: kf-img-slide;
   -webkit-animation-duration: 1.6s;
@@ -177,9 +214,35 @@
           animation-fill-mode: none;
 }
 
-.inview:hover .bg-img-zoom {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.hover-darken.inview::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-animation-name: kf-img-slide;
+          animation-name: kf-img-slide;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+.hover-darken.inview:hover::before {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @-webkit-keyframes kf-cover-slide {
@@ -270,76 +333,6 @@
   }
 }
 
-.list {
-  width: 100%;
-  height: auto;
-}
-
-.list__inner {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.list__item {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-}
-
-.list__item p {
-  text-align: center;
-}
-
-.float-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.float-img.inview {
-  -webkit-animation-name: kf-img-float;
-          animation-name: kf-img-float;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-}
-
-.img-zoom {
-  width: 100%;
-  height: 420px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0;
-}
-
-.inview .img-zoom {
-  opacity: 1;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-
-.inview:hover .img-zoom {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 @-webkit-keyframes kf-img-float {
   0% {
     opacity: 0;
@@ -364,37 +357,6 @@
     -webkit-transform: none;
             transform: none;
   }
-}
-
-.hover-darken.inview::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  z-index: 1;
-  pointer-events: none;
-  -webkit-animation-name: kf-img-slide;
-          animation-name: kf-img-slide;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-}
-
-.hover-darken.inview:hover::before {
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 h1 {
