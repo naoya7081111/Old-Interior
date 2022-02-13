@@ -1,0 +1,36 @@
+.animate-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+
+    & > .char {
+        opacity: 0;
+        display: inline-block;
+    }
+
+    &.inview > .char {
+        opacity: 1;
+        @include animation(
+            $name: kf-text-down,
+            $duration: 1.6s,
+            $fill-mode: none,
+            $timing-function: ease-in-out
+        );
+        @for $i from 1 through 30 {
+            &:nth-child(#{$i}){
+                animation-delay: 0.04s * $i;
+            }
+        }
+    }
+}
+
+@keyframes kf-text-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-60%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
