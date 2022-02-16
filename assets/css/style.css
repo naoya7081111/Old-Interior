@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .pace-done #global-container {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -1051,6 +1052,80 @@
     -webkit-transform: none;
             transform: none;
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+  padding-bottom: 30px !important;
+  margin-bottom: 200px;
+}
+
+.swiper-slide {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-slide span {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.swiper-button-box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  width: 60px;
+  height: 40px;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 20px !important;
+  height: 40px !important;
+  top: 0 !important;
+  background-size: 20px 20px;
+  /* 表示したいサイズ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 !important;
+  position: relative !important;
+}
+
+/* 次ページボタンのスタイル */
+.swiper-button-next {
+  background-image: url("../img/leftArrow.png");
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+  /* 左右反転 */
+}
+
+/* 前ページボタンのスタイル */
+.swiper-button-prev {
+  background-image: url("../img/leftArrow.png");
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
 }
 
 h1 {

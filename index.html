@@ -7,6 +7,8 @@
     <title>Old Interior</title>
     <link rel="stylesheet" href="./assets/css/vendors/bootstrap-reboot.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors/pace.min.js"></script>
   </head>
   <body>
@@ -14,6 +16,25 @@
     <div id="global-container">
       
       <h1>Old Interior</h1>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide" style="background-image: url(./assets/img/North1.jpg);"><span>Slide 1</span></div>
+          <div class="swiper-slide" style="background-image: url(./assets/img/Industrial2.jpg);"><span>Slide 2</span></div>
+          <div class="swiper-slide" style="background-image: url(./assets/img/Mid1.jpg);"><span>Slide 3</span></div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-box">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>  
+        </div>
+
+      </div>      
+
       <button class="btn slide-bg">Button</button>
       <button class="btn cover-3d">Button</button>
   
@@ -59,6 +80,7 @@
     </div>
 
     <script src="./assets/js/vendors/TweenMax.min.js"></script>
+    <script src="./assets/js/libs/slide-show.js"></script>
     <script src="./assets/js/libs/text-animation.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
