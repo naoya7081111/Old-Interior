@@ -1089,7 +1089,7 @@
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
-  width: 60px;
+  width: 40px;
   height: 40px;
   bottom: 0;
   right: 0;
@@ -1102,6 +1102,8 @@
   width: 20px !important;
   height: 40px !important;
   top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
   background-size: 20px 20px;
   /* 表示したいサイズ */
   background-repeat: no-repeat;
