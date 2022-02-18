@@ -1,7 +1,7 @@
 class TextAnimation {
     constructor(el) {
         this.DOM = {};
-        this.DOM.el = document.querySelector(el);
+        this.DOM.el = el instanceof HTMLElement ? el : document.querySelector(el);
         this.chars = this.DOM.el.innerHTML.trim().split("");
         this.DOM.el.innerHTML = this._splitText();
     }
@@ -22,6 +22,7 @@ class TweenTextAnimation extends TextAnimation {
         this.DOM.chars = this.DOM.el.querySelectorAll('.char');
     }
     animate() {
+        this.DOM.el.classList.add('inview');
         this.DOM.chars.forEach((c, i) => {
             // 1つ目DOM、2つ目duration、3つ目アニメーションの詳細
             TweenMax.to(c, .6, {

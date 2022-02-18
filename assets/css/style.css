@@ -853,17 +853,20 @@
   font-size: 24px;
   font-weight: bold;
   color: orange;
+  opacity: 0;
+}
+
+.animate-title.inview {
+  opacity: 1;
 }
 
 .animate-title > .char {
-  opacity: 0;
   display: inline-block;
 }
 
 .animate-title.inview > .char {
-  opacity: 1;
-  -webkit-animation-name: kf-text-down;
-          animation-name: kf-text-down;
+  -webkit-animation-name: kf-text-up;
+          animation-name: kf-text-up;
   -webkit-animation-duration: 1.6s;
           animation-duration: 1.6s;
   -webkit-animation-timing-function: ease-in-out;
@@ -874,8 +877,8 @@
           animation-iteration-count: 1;
   -webkit-animation-direction: normal;
           animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .animate-title.inview > .char:nth-child(1) {
@@ -1028,7 +1031,7 @@
           animation-delay: 1.2s;
 }
 
-@-webkit-keyframes kf-text-down {
+@-webkit-keyframes kf-text-up {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-60%);
@@ -1036,12 +1039,12 @@
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
-            transform: none;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes kf-text-down {
+@keyframes kf-text-up {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-60%);
@@ -1049,8 +1052,8 @@
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
-            transform: none;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
