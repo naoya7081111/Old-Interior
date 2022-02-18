@@ -14,69 +14,84 @@
   <body>
 
     <div id="global-container">
-      
-      <h1>Old Interior</h1>
-
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide" style="background-image: url(./assets/img/North1.jpg);"><span>Slide 1</span></div>
-          <div class="swiper-slide" style="background-image: url(./assets/img/Industrial2.jpg);"><span>Slide 2</span></div>
-          <div class="swiper-slide" style="background-image: url(./assets/img/Mid1.jpg);"><span>Slide 3</span></div>
+      <div id="container">
+        <header>
+          <div class="header wrapper">
+            <h1>Old Interior</h1>
+            <nav class="header__nav">
+              <ul>
+                <li class="header__item"></li>
+                <li class="header__item"></li>
+                <li class="header__item"></li>  
+              </ul>
+            </nav>  
+          </div>
+        </header>
+        <div id="content">
+          <div class="swiper mb-lg">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide" style="background-image: url(./assets/img/North1.jpg);"><span>Slide 1</span></div>
+              <div class="swiper-slide" style="background-image: url(./assets/img/Industrial2.jpg);"><span>Slide 2</span></div>
+              <div class="swiper-slide" style="background-image: url(./assets/img/Mid1.jpg);"><span>Slide 3</span></div>
+            </div>
+    
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-box">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>  
+            </div>
+    
+          </div>        
+          <div id="main-content" class="wrapper">
+            <div class="fav">
+              <h2>どれが気に入りますか？</h2>
+              <div class="fav__inner">
+                <div class="fav__item">
+                    <div class="cover-slide hover-darken inview">
+                        <div class="bg-img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
+                    </div>
+                    <p>Industrial</p>
+                </div>
+                <div class="fav__item">
+                    <div class="cover-slide hover-darken inview">
+                        <div class="bg-img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
+                    </div>
+                    <p>Industrial</p>
+                </div>
+                <div class="fav__item">
+                    <div class="cover-slide hover-darken inview">
+                        <div class="bg-img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
+                    </div>
+                    <p>Industrial</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-box">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>  
-        </div>
-
-      </div>      
-
-      <button class="btn slide-bg">Button</button>
-      <button class="btn cover-3d">Button</button>
+        <footer></footer>
   
-      <div class="fav">
-        <h2>どれが気に入りますか？</h2>
-        <div class="fav__inner">
-          <div class="fav__item">
-              <div class="cover-slide hover-darken inview">
-                  <div class="bg-img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
-              </div>
-              <p>Industrial</p>
+        <!-- <button class="btn slide-bg">Button</button>
+        <button class="btn cover-3d">Button</button> -->
+            
+        <!-- <div class="list">
+          <h2>リスト一覧</h2>
+          <div class="list__inner">
+            <div class="list__item">
+                <div class="float-img hover-darken">
+                    <div class="img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
+                </div>
+                <p>Industrial</p>
+            </div>
           </div>
-          <div class="fav__item">
-              <div class="cover-slide hover-darken inview">
-                  <div class="bg-img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
-              </div>
-              <p>Industrial</p>
-          </div>
-          <div class="fav__item">
-              <div class="cover-slide hover-darken inview">
-                  <div class="bg-img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
-              </div>
-              <p>Industrial</p>
-          </div>
-        </div>
+        </div> -->
+    
+        <!-- <div class="anim" style="width: 100%; text-align: center; margin: 50px;">
+          <div class="animate-title">ANIMATION GAME</div>
+        </div>     -->
+
       </div>
-      
-      <div class="list">
-        <h2>リスト一覧</h2>
-        <div class="list__inner">
-          <div class="list__item">
-              <div class="float-img hover-darken">
-                  <div class="img-zoom" style="background-image: url(./assets/img/Industrial1.jpg);"></div>
-              </div>
-              <p>Industrial</p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="anim" style="width: 100%; text-align: center; margin: 50px;">
-        <div class="animate-title">ANIMATION GAME</div>
-      </div>  
     </div>
 
     <script src="./assets/js/vendors/TweenMax.min.js"></script>
