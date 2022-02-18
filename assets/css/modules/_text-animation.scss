@@ -2,18 +2,21 @@
     font-size: 24px;
     font-weight: bold;
     color: orange;
+    opacity: 0;
+
+    &.inview {
+        opacity: 1;
+    }
 
     & > .char {
-        opacity: 0;
         display: inline-block;
     }
 
     &.inview > .char {
-        opacity: 1;
         @include animation(
-            $name: kf-text-down,
+            $name: kf-text-up,
             $duration: 1.6s,
-            $fill-mode: none,
+            $fill-mode: both,
             $timing-function: ease-in-out
         );
         @for $i from 1 through 30 {
@@ -24,13 +27,13 @@
     }
 }
 
-@keyframes kf-text-down {
+@keyframes kf-text-up {
     0% {
         opacity: 0;
         transform: translateY(-60%);
     }
     100% {
         opacity: 1;
-        transform: none;
+        transform: translateY(0);
     }
 }
