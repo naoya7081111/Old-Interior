@@ -1116,7 +1116,7 @@
 
 /* 次ページボタンのスタイル */
 .swiper-button-next {
-  background-image: url("../img/leftArrow.png");
+  background-image: url("../img/arrow.png");
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
   /* 左右反転 */
@@ -1124,7 +1124,7 @@
 
 /* 前ページボタンのスタイル */
 .swiper-button-prev {
-  background-image: url("../img/leftArrow.png");
+  background-image: url("../img/arrow.png");
 }
 
 .swiper-button-prev:after,
@@ -1135,6 +1135,30 @@
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+a {
+  color: #707070;
+}
+
+a:hover {
+  color: #707070;
+  opacity: 0.8;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+body {
+  color: #707070;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .font-sm {
@@ -1149,7 +1173,7 @@ img {
   font-size: 17px;
 }
 
-.font-lg {
+.font-lg, h2 {
   font-size: 25px;
 }
 
@@ -1169,14 +1193,50 @@ img {
   padding-bottom: 80px !important;
 }
 
-.header {
-  width: 100%;
-  height: 136px;
+h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
 }
 
-.wrapper {
-  width: 80%;
-  margin: 0 auto;
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: White;
+}
+
+.header {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__item {
+  list-style: none;
+  margin-left: 18px;
+}
+
+#content {
+  margin-top: 80px;
 }
 
 footer {
@@ -1186,6 +1246,12 @@ footer {
 }
 
 @media screen and (min-width: 960px) {
+  .header__nav {
+    display: block;
+  }
+  .header .mobile-menu__btn {
+    display: none;
+  }
   .swiper {
     width: 80%;
   }

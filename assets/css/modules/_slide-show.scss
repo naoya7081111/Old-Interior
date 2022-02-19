@@ -48,13 +48,13 @@
 
 /* 次ページボタンのスタイル */
 .swiper-button-next {
-background-image: url('../img/leftArrow.png');
+background-image: url('../img/arrow.png');
 transform: scale(-1, 1); /* 左右反転 */
 }
 
 /* 前ページボタンのスタイル */
 .swiper-button-prev {
-    background-image: url('../img/leftArrow.png');
+    background-image: url('../img/arrow.png');
 }
 
 .swiper-button-prev:after,

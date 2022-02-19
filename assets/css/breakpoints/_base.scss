@@ -1,8 +1,30 @@
 img {
     max-width: 100%;
     vertical-align: bottom;
-  }
+}
+
+a {
+    color: $cBase;
+    &:hover {
+        color: $cBase;
+        opacity: 0.8;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+ul {
+    margin-bottom: 0;
+}
     
+body {
+    color: $cBase;
+}
+
+.wrapper {
+    width: $wrapperWidth;
+    margin: 0 auto;
+}
 
 .font-sm {
     font-size: 14px;
@@ -30,15 +52,45 @@ img {
     padding-bottom: 80px !important;
 }
 
-
-.header {
-    width: 100%;
-    height: 136px;
+h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
 }
 
-.wrapper {
-    width: $wrapperWidth;
-    margin: 0 auto;
+h2 {
+    @extend .font-lg;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: $cWhite;
+}
+
+.header {
+    height: $headerHeight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__nav {
+        display: none;
+
+        & ul {
+            display: flex;
+        }
+    }
+    &__item {
+        list-style: none;
+        margin-left: 18px;
+    }
+}
+
+#content {
+    margin-top: $headerHeight;
 }
 
 footer {
