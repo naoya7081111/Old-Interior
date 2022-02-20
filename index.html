@@ -23,9 +23,9 @@
             <h1><a href="#" class="font-lg">Old Interior</a></h1>
             <nav class="header__nav">
               <ul>
-                <li class="header__item"><a href="">北欧</a></li>
-                <li class="header__item"><a href="">インダストリアル</a></li>
-                <li class="header__item"><a href="">ミッドセンチュリー</a></li>  
+                <li class="header__item font-md"><a href="">北欧</a></li>
+                <li class="header__item font-md"><a href="">インダストリアル</a></li>
+                <li class="header__item font-md"><a href="">ミッドセンチュリー</a></li>  
               </ul>
             </nav>  
             <button class="mobile-menu__btn">
@@ -35,14 +35,31 @@
             </button>            
           </div>
         </header>
+        <aside class="mobile-menu">
+          <div class="mobile-menu__title mb-lg">
+            <h1><a href="#" class="font-lg">Old Interior</a></h1>
+            <button class="mobile-menu__close-btn">
+              <span></span>
+              <span></span>
+            </button>              
+          </div>
+          <nav class="mobile-menu__nav">
+            <ul>
+              <li class="mobile-menu__item mb-sm font-lr"><a href="">北欧</a></li>
+              <li class="mobile-menu__item mb-sm font-lr"><a href="">インダストリアル</a></li>
+              <li class="mobile-menu__item mb-sm font-lr"><a href="">ミッドセンチュリー</a></li>  
+            </ul>  
+          </nav>
+        </aside>
+        <div class="mobile-menu__overray"></div>
         <div id="content">
           <div class="swiper mb-lg">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide" style="background-image: url(./assets/img/North1.jpg);"><span>北欧 スタイル</span></div>
-              <div class="swiper-slide" style="background-image: url(./assets/img/Industrial3.jpeg);"><span>インダストリアル スタイル</span></div>
-              <div class="swiper-slide" style="background-image: url(./assets/img/Mid1.jpg);"><span>ミッドセンチュリー スタイル</span></div>
+              <div class="swiper-slide" style="background-image: url(./assets/img/North1.jpg);"><span class="font-md">北欧</span></div>
+              <div class="swiper-slide" style="background-image: url(./assets/img/Industrial3.jpeg);"><span class="font-md">インダストリアル</span></div>
+              <div class="swiper-slide" style="background-image: url(./assets/img/Mid1.jpg);"><span class="font-md">ミッドセンチュリー</span></div>
             </div>
     
             <!-- If we need navigation buttons -->
@@ -104,6 +121,7 @@
 
     <script src="./assets/js/vendors/TweenMax.min.js"></script>
     <script src="./assets/js/vendors/scroll-polyfill.js"></script>
+    <script src="./assets/js/libs/mobile-menu.js"></script>
     <script src="./assets/js/libs/slide-show.js"></script>
     <script src="./assets/js/libs/text-animation.js"></script>
     <script src="./assets/js/libs/scroll.js"></script>
