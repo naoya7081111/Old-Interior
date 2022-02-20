@@ -52,6 +52,9 @@ body {
 .pb-lg {
     padding-bottom: 80px !important;
 }
+.mb-xl {
+    margin-bottom: 120px !important;
+}
 
 h1 {
     font-family: 'Cinzel', serif;
@@ -98,6 +101,11 @@ header {
 
 #content {
     padding-top: $headerHeight;
+}
+
+.swiper-tag,
+.swiper-button-box {
+    visibility: hidden;
 }
 
 footer {
