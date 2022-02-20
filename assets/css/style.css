@@ -1069,7 +1069,7 @@
   background-size: cover;
 }
 
-.swiper-slide span {
+.swiper-tag {
   line-height: 20px;
   margin: 0;
   position: absolute;
@@ -1310,6 +1310,10 @@ body {
   padding-bottom: 80px !important;
 }
 
+.mb-xl {
+  margin-bottom: 120px !important;
+}
+
 h1 {
   font-family: 'Cinzel', serif;
   font-weight: 600;
@@ -1362,6 +1366,11 @@ header {
   padding-top: 80px;
 }
 
+.swiper-tag,
+.swiper-button-box {
+  visibility: hidden;
+}
+
 footer {
   width: 100%;
   height: 180px;
@@ -1377,6 +1386,10 @@ footer {
   }
   .swiper {
     width: 80%;
+  }
+  .swiper-tag,
+  .swiper-button-box {
+    visibility: visible;
   }
   footer {
     width: 100%;
