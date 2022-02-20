@@ -62,10 +62,6 @@ h1 {
     margin: 0
 }
 
-h2 {
-    @extend .font-lg;
-}
-
 #container {
     position: relative;
     z-index: 10;
@@ -106,6 +102,19 @@ header {
 .swiper-tag,
 .swiper-button-box {
     visibility: hidden;
+}
+
+.fav {
+    width: 100%;
+    height: auto;
+
+    &__item {
+        margin-bottom: 90px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 footer {
