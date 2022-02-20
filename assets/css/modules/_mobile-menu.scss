@@ -1,0 +1,102 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    padding: 28px;
+    z-index: 200;
+    transform: scaleX(0);
+    background-color: $cWhite;
+    transition: all 0.3s ease;
+    transform-origin: right;
+    visibility: hidden;
+
+    &.menu-open {
+        transform: none;
+        visibility: visible;
+    }
+
+    &__btn {
+        border: none;
+        background-color: $cWhite;
+        outline: none !important;
+    
+        & span {
+            width: 25px;
+            height: 2px;
+            display: block;
+            background-color: $cBase;
+            margin-bottom: 7px;
+            transition: all 0.3s;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    
+        &.menu-open span {
+    
+            &:nth-child(1) {
+                transform: translateY(9px) rotate(-135deg);
+            }
+            &:nth-child(2) {
+                transform: translateX(-18px) scaleX(0);
+            }
+            &:nth-child(3) {
+                transform: translateY(-9px) rotate(135deg);
+            }
+        }    
+    }
+
+    &__overray {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $cBlack;
+        z-index: 199;
+        opacity: 0;
+        pointer-events: none;
+
+        &.menu-open {
+            opacity: 0.35;
+            pointer-events: all;
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__close-btn {
+        border: none;
+        background-color: $cWhite;
+        outline: none !important;
+
+        & span {
+            width: 25px;
+            height: 2px;
+            display: block;
+            background-color: $cBase;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+
+            &:nth-child(1) {
+                transform: translateY(5px) rotateZ(135deg);
+            }
+            &:last-child {
+                transform: translateY(-5px) rotateZ(-135deg);
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__item {
+        list-style: none;
+    }
+}
+
