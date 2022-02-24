@@ -20,7 +20,6 @@ class ScrollObserver {
                     if(this.onece) {
                         observer.unobserve(entry.target);
                     }
-                    observer.unobserve(entry.target);
                 } else {
                     this.cb(entry.target, false);
                 }
