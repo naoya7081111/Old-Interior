@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const scroll = new ScrollObserver('.float-img', cb);
     const detail_scroll = new ScrollObserver('.detail', cb);
     const detailTitle_scroll = new ScrollObserver('.detail__title', cb, {onece: false});
+    const appear_scroll = new ScrollObserver('.appear', cb);
     
     const cb2 = (el, isIntersecting) => {
         if(isIntersecting) {
