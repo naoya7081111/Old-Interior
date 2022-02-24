@@ -49,6 +49,27 @@
     &__explain {
         flex-basis: 45%;
     }
+    &__title {
+        position: relative;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 120px;
+            height: 1px;
+            background-color: $cBlack;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateX(-110%) scaleX(0);
+            transition: transform 0.6s ease 0.2s;
+            transform-origin: right;
+        }
+        &.inview {
+            &::before {
+                transform: translateX(-110%);
+            }
+        }
+    }
 }
 
 footer {
