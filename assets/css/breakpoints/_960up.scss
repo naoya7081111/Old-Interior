@@ -72,6 +72,18 @@
     }
 }
 
+.list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, 100px);
+
+    &__item {
+        grid-row: span 3;
+        &.low-item {
+            grid-row: span 2;
+        }
+    }
+}
+
 footer {
     width: 100%;
     height: 240px;
