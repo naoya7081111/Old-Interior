@@ -27,6 +27,10 @@ body {
     margin: 0 auto;
 }
 
+.font-xs {
+    font-size: 10px;
+}
+
 .font-sm {
     font-size: 14px;
 }
@@ -40,6 +44,9 @@ body {
     font-size: 25px;
 }
 
+.mb-xs {
+    margin-bottom: 12px !important;
+}
 .mb-sm {
     margin-bottom: 16px !important;
 }
@@ -171,4 +178,19 @@ footer {
     width: 100%;
     height: 180px;
     background-color: $cRedLittle;
+}
+
+.footer {
+    &__wrapper {
+        @extend .wrapper;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &__content {
+        height: auto;
+    }
+    &__item {
+        list-style: none;
+    }
 }
