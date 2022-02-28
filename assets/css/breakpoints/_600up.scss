@@ -1,3 +1,7 @@
+.mb-xs {
+    margin-bottom: 16px !important;
+}
+
 .font-lr {
     font-size: 25px;
 }
@@ -8,4 +12,14 @@
 
 .list {
     grid-template-rows: repeat(9, 100px);
+}
+
+.footer {
+    &__nav > ul {
+        display: block;
+    }
+    &__item {
+        display: inline-block;
+        margin-right: 10px;
+    }
 }
