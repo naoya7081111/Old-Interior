@@ -1344,6 +1344,10 @@ header {
   background-color: White;
 }
 
+header.outview {
+  opacity: 0.9;
+}
+
 .header {
   height: 80px;
   display: -webkit-box;
@@ -1372,8 +1376,15 @@ header {
   margin-left: 18px;
 }
 
+.header__observer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #content {
   padding-top: 80px;
+  position: relative;
 }
 
 .swiper-tag,

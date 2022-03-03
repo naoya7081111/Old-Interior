@@ -81,6 +81,10 @@ header {
     left: 0;
     z-index: 100;
     background-color: $cWhite;
+
+    &.outview {
+        opacity: 0.9;
+    }
 }
 
 .header {
@@ -100,10 +104,16 @@ header {
         list-style: none;
         margin-left: 18px;
     }
+    &__observer {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 #content {
     padding-top: $headerHeight;
+    position: relative;
 }
 
 .swiper-tag,
